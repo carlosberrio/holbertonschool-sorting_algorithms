@@ -32,7 +32,7 @@ void insertion_sort_list(listint_t **list)
 			else
 				*list = list1;
 			list1->next->prev = list1;
-			print_list(*list);
+			print_list((const listint_t *)*list);
 		}
 		list1 = temporal;
 	}
