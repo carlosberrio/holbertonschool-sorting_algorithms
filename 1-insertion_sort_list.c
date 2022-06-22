@@ -11,8 +11,10 @@ void insertion_sort_list(listint_t **list)
 	listint_t *list1 = NULL;
 	listint_t *temporal = NULL;
 
-	if ((*list)->next == NULL || list == NULL || (*list) == NULL)
+	if (!list || !(*list) || !(*list)->next)
+	{
 		return;
+	}
 
 	list1 = *list;
 	temporal = *list;
